@@ -1,13 +1,11 @@
 import { ethers } from "hardhat";
 
 export async function deployWeatherOracle() {
+  const weatherOracle = await ethers.deployContract("WeatherOracle");
 
-  const WeatherOracle = await ethers.getContractFactory("WeatherOracle");
-  const weatherOracle = await WeatherOracle.deploy();
-  await weatherOracle.deployed()
-
-  console.log("Weather Oracle address: ", weatherOracle.address);
-  return weatherOracle
+  await weatherOracle.waitForDeployment();
+  console.log("Weather Oracle address: ", weatherOracle.target);
+  return weatherOracle;
 }
 
 // deployWeatherOracle()

@@ -1,20 +1,28 @@
 {
   "name": "hardhat-project",
   "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "@types/chai": "^4.3.6",
-    "@types/express": "^4.17.13",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "^20.6.0",
-    "chai": "^4.3.8",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=16.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
     "hardhat": "^2.17.2",
-    "nodemon": "^2.0.19",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": ">=4.5.0"
   },
   "scripts": {
-    "start": "sucrase src/index.ts",
-    "server": "sucrase src/server.ts"
+    "start": "npx hardhat run src/index.ts --network localhost",
+    "server": "npx hardhat run src/server.ts --network localhost"
   },
   "dependencies": {
     "axios": "^0.27.2",

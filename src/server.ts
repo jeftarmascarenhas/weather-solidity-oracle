@@ -21,14 +21,14 @@ async function main() {
   );
 
   const newJob = weatherOracle.filters.NewJob();
-  weatherOracle.on(newJob, async (error: any, data: any) => {
+  weatherOracle.on(newJob, async (data: any, error: any) => {
     console.log("initJob");
     if (error) {
-      console.log(error);
+      console.log("error: ", error);
       return;
     }
-    console.log(data.returnValues);
-    const temp = await callApi(data.returnValues.lat, data.returnValues.lon);
+    const { lat, lon } = data.args;
+    const temp = await callApi(lat, lon);
     console.log("temp: ", temp);
     const jobId = await weatherOracle.jobId();
 
