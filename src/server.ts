@@ -40,17 +40,6 @@ async function main() {
   });
 
   console.log("running");
-
-  // await contract.methods.getWeather(lat, lon).send();
-  // try {
-  //   // console.log("getWeather: ", getWeather);
-  // } catch (error) {
-  //   console.error("error: ", error);
-  //   throw error;
-  // }
-  // contract.events.NewJob({ fromBlock: "latest" }, (event: any) => {
-  //   console.log("NewJob: ", event);
-  // });
 }
 
 main();

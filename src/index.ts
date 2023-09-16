@@ -8,14 +8,15 @@ const lon = "-34.91740605416537";
 async function main() {
   try {
     const weather = await ethers.getContractAt("Weather", weatherAddress);
-    // const getWeather = await weather.getWeather(lat, lon);
-    // await getWeather.wait();
+
+    const getWeather = await weather.getWeather(lat, lon);
+    await getWeather.wait();
 
     // const temp = await weather.temp();
     // await temp.wait();
 
-    const tempResult = await weather.tempResult();
-    console.log("WEATHER temp: ", tempResult);
+    // const tempResult = await weather.tempResult();
+    // console.log("WEATHER temp: ", tempResult);
   } catch (error: any) {
     console.log("ERROR: ", error?.message);
   }
