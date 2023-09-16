@@ -1,8 +1,15 @@
-# Sample Hardhat Project
+# Solidity Oracle Weather
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Learn how to create oracle with Solidity and Nodejs
 
-Try running some of the following tasks:
+Became a Blockchain developer watching [NFT Choose](https://www.youtube.com/@nftchoose) on Youtube.
+
+```shell
+# running oracle server and listening WeatherOracle smart contract
+npm run server
+# running transaction of Weather smart contract
+npm run server
+```
 
 ```shell
 npx hardhat help
