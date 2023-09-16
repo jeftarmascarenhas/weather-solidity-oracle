@@ -7,9 +7,3 @@ export async function deployWeatherOracle() {
   console.log("Weather Oracle address: ", weatherOracle.target);
   return weatherOracle;
 }
-
-// deployWeatherOracle()
-// .catch((error) => {
-//   console.error(error)
-//   process.exitCode = 1;
-// })
