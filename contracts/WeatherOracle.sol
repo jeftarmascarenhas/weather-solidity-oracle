@@ -9,8 +9,8 @@ contract WeatherOracle {
 
     event NewJob(string lat, string lon, uint256 jobId);
 
-    function getWeather(string memory _lat, string memory _lon) external {
-        emit NewJob(_lat, _lon, jobId);
+    function getWeather(string memory lat, string memory lon) external {
+        emit NewJob(lat, lon, jobId);
         jobId++;
     }
 

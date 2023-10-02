@@ -15,6 +15,8 @@ async function callApi(lat: string, log: string) {
 }
 
 async function main() {
+  console.log("running Oracle");
+
   const weatherOracle = await ethers.getContractAt(
     "WeatherOracle",
     weatherAddress
@@ -29,7 +31,9 @@ async function main() {
     }
     const { lat, lon } = data.args;
     const temp = await callApi(lat, lon);
+
     console.log("temp: ", temp);
+
     const jobId = await weatherOracle.jobId();
 
     console.log("jobId: ", jobId);
@@ -38,8 +42,6 @@ async function main() {
     const jobResults = await weatherOracle.jobResults(jobId);
     console.log("jobResults: ", jobResults);
   });
-
-  console.log("running");
 }
 
 main();
